@@ -3,6 +3,15 @@ class Sell < ApplicationRecord
   enum status: { finished: 0, canceled: 1 }
 
   validates :client, presence: true
+
+  has_many :sell_products
+  has_many :products, through: :sell_products
+  
+  has_many :sell_services
+  has_many :services, through: :sell_services
+
+  belongs_to :discount
+  belongs_to :client
  
   def fae_display_field
     id
@@ -12,6 +21,5 @@ class Sell < ApplicationRecord
     order(:id)
   end
  
-  belongs_to :discount
-  belongs_to :client
+  
 end
