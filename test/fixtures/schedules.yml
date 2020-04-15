@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2020-04-15
+  total: 9.99
+  client: one
+
+two:
+  data: 2020-04-15
+  total: 9.99
+  client: two

@@ -1,0 +1,12 @@
+<h1>Agendamentos</h1>
+
+<p>
+<%= @client %>, seu agendamento ficou para <%= @data %> com os seguindos serviços
+<ul>
+  <% @services.each do |service| %>
+    <li><%= service.title %></li>
+  <%end%>
+</ul>
+<br>
+<%= @total %>
+</p>
